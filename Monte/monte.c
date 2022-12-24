@@ -17,7 +17,7 @@ int main (){
 
 	srand((unsigned)time(NULL));
 	
-	while(count2 <= num2){
+	while(count2 < num2){
 
 		for (i = 0; i <= num1; i++){
 			x = (double)(rand() / (double)RAND_MAX);
