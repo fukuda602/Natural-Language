@@ -5,40 +5,36 @@
 
 int main (){
 	int i;
-	int count1 = 0, count2 = 0; 
-	int long num1 = 0, num2 = 0;
+	int count = 0; 
+	int long num = 10;
 	double x, y;
 	double pi;
 
-	printf("試行回数：");
-	scanf("%ld",&num1);
-	printf("繰り返し：");
-	scanf("%ld",&num2);
-
 	srand((unsigned)time(NULL));
 	
-	while(count2 < num2){
+	while(num <=  1000000000){
 
-		for (i = 0; i <= num1; i++){
+		for (i = 0; i <= num; i++){
 			x = (double)(rand() / (double)RAND_MAX);
 			y = (double)(rand() / (double)RAND_MAX);
 			x = pow(x - 0.5, 2);
 			y = pow(y - 0.5, 2);
 
 			if(x + y <= pow(0.5, 2)){
-				count1++;
+				count++;
 			}
 		}
 	
-		pi = (double)count1 / num1 * 4;
-		printf("%f\n", pi);
+		pi = (double)count / num * 4;
+		printf("%f\n",pi);
 
 		x = 0;
 		y = 0;
-		count1 = 0;
+		count = 0;
 		pi = 0;
 
-		count2++;
+		num *= 10;
+
 	}
 
 	return 0;
