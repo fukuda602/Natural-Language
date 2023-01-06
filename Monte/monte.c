@@ -26,7 +26,7 @@ int main (){
 		}
 	
 		pi = (double)count / num * 4;
-		printf("%f\n",pi);
+		printf("%-10ld  :  %f\n",num ,pi);
 
 		x = 0;
 		y = 0;
@@ -34,7 +34,6 @@ int main (){
 		pi = 0;
 
 		num *= 10;
-
 	}
 
 	return 0;
